@@ -15,11 +15,11 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: '17'
 
       - uses: subosito/flutter-action@v2
         with:
-          channel: stable
+          flutter-version: '3.10.6'
 
       - run: flutter pub get
       - run: flutter build apk --debug -t lib/main_dev.dart
